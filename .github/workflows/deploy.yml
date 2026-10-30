@@ -16,7 +16,7 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run build
+            - run: npx parcel build index.html "Auth/*.html" "pages/*.html" --public-url /${{ github.event.repository.name }}/ --no-source-maps
         env:
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
           FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
