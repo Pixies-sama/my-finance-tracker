@@ -35,7 +35,7 @@ function showMessage(message, type = "error") {
   if (!signupMessage) return;
 
   signupMessage.textContent = message;
-  signupMessage.className = `signup-message ${type}`;
+  signupMessage.className = `form-message ${type}`;
 }
 
 // ================================
