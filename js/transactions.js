@@ -182,8 +182,7 @@ onAuthStateChanged(auth, async (user) => {
     }
 
     await loadTransactions();
-    console.log("Authenticated user:", currentUser.uid);
-    console.log("Firestore connection ready.");
+    
   } catch (error) {
     console.error("Unable to load user profile:", error);
   }
@@ -281,7 +280,7 @@ transactionForm.addEventListener("submit", async (event) => {
     editingTransactionId = null;
     closeModal();
 
-    console.log("Transaction saved successfully.");
+
   } catch (error) {
     console.error("Error saving transaction:", error);
     showFormMessage("Unable to save transaction. Please try again.", "error");
@@ -322,7 +321,7 @@ async function loadTransactions() {
     displayTransactions();
     updateSummary();
 
-    console.log("Transactions loaded:", allTransactions.length);
+    
   } catch (error) {
     console.error("Error loading transactions:", error);
     transactionsTableBody.innerHTML = `

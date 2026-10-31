@@ -166,7 +166,7 @@ onAuthStateChanged(auth, async (user) => {
 
         await loadAnalytics(currentUser.uid);
 
-        console.log("Analytics connected to Firestore.");
+        
     } catch (error) {
         console.error("Unable to load analytics:", error);
 
@@ -205,7 +205,7 @@ async function loadAnalytics(uid) {
 
     renderAnalytics();
 
-    console.log("Transactions loaded for analytics:", allTransactions.length);
+    
 }
 
 

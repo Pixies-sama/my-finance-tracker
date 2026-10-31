@@ -281,10 +281,7 @@ function listenForTransactions(user) {
       updateFinancialSummary(transactions);
       displayRecentTransactions(transactions);
 
-      console.log(
-        "Dashboard transactions updated:",
-        transactions.length
-      );
+      
     },
     (error) => {
       console.error("Unable to load dashboard transactions:", error);
@@ -335,7 +332,7 @@ onAuthStateChanged(auth, async (user) => {
     await loadUserProfile(refreshedUser);
     listenForTransactions(refreshedUser);
 
-    console.log("Dashboard authenticated:", refreshedUser.uid);
+    
   } catch (error) {
     console.error("Dashboard initialization failed:", error);
   }
