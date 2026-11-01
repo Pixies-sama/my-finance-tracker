@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
    "dev": "parcel index.html \"Auth/*.html\" \"pages/*.html\" --no-source-maps",
-    "build": "parcel build index.html Auth/signin.html Auth/signup.html pages/dashboard.html --public-url ./ --no-source-maps"
+    "build": "parcel build index.html \"Auth/*.html\" \"pages/*.html\" --public-url / --no-source-maps"
   },
   "dependencies": {
     "firebase": "^10.14.1"
