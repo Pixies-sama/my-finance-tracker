@@ -12,13 +12,6 @@ const firebaseConfig = {
   appId: process.env.FIREBASE_APP_ID
 };
 
-// Check that Parcel loaded the environment variables
-console.log("Firebase project:", firebaseConfig.projectId);
-console.log(
-  "Firebase API key loaded:",
-  Boolean(firebaseConfig.apiKey)
-);
-
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
